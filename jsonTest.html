@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在JavaScript中创建JSON对象</title>
+</head>
+		<!-- JSON 是纯文本
+		JSON 具有“自我描述性”（人类可读）
+		JSON 具有层级结构（值中存在值）
+		JSON 可通过 JavaScript 进行解析
+		JSON 数据可使用 AJAX 进行传输 
+		JSON 文件的文件类型是 ".json"
+		JSON 文本的 MIME 类型是 "application/json"
+	-->
+<body>
+	<p>
+		<span id="name">Name:</span><br>
+		<span id="age">Age:</span><br>
+		<span id="address">Address:</span><br>
+		<span id="phone">Phone:</span><br>
+	</p>
+
+	<script type="text/javascript">
+		var jsonObject = {
+			"name":"Liwuyang",
+			"age":"28",
+			"address":"beijing",
+			"phone":"13520382752"
+		}
+
+		console.log(jsonObject)
+		var spns = document.getElementsByTagName('span')
+		for (var i = 0; i < spns.length; i++) {
+			spns[i].innerHTML = jsonObject[spns[i].id]
+		}
+
+		console.log(jsonObject.name)
+
+	</script>
+</body>
+
+</html>

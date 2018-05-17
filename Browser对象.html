@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- 	Window对象
+ --><!-- 	<script type="text/javascript">
+		let myWindow = window.open('','','width=200,height=200')
+	</script>
+
+	<script type="text/javascript">
+		function checkWindow() {
+			// body...
+			if (window.closed) {
+				closedWindow()
+			} else {
+				notCloseWindow()
+			}
+		}
+
+		function closedWindow() {
+			// body...
+			console.log("open")
+			document.write("<p>" + "window已经关闭了" + "<\p>")
+		}
+
+		function notCloseWindow() {
+			// body...
+			console.log("close")
+			document.write("<p>window没有关闭<\p>")
+		}
+	</script>
+
+	<input type="button" name="button" value="检测Windows" onclick="checkWindow()"> -->
+
+<!-- /*Navigator对象  包含有关浏览器的信息。*/
+
+<script type="text/javascript">
+	var nr = navigator
+	document.write("CodeName: " + nr.appCodeName)
+	document.write("<br>")
+	document.write("appName: " + nr.appName)
+</script> -->
+
+<!--   Screen:包含有关客户端屏幕的信息
+ -->
+
+ <script type="text/javascript">
+ 	document.write("显示屏的宽度：" + Screen.availWidth + "<br>")
+ 	document.write("显示屏的高度: " + Screen.width + "<br>")
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM导航</title>
+</head>
+<body>
+<!-- 	<div>
+		<p>第1节点</p>
+		<p>第2节点</p>
+	</div> -->
+	<p>第一个节点</p>
+	<p>第二个节点</p>
+	<p>第三个节点</p>
+</body>
+
+<script type="text/javascript">
+	var p = document.getElementsByTagName('p')
+	document.write(p[0].firstChild.nodeValue)
+
+	console.log(p[1].lastChild.nodeValue)
+
+	var body = document.getElementsByTagName('body')
+	console.log(body.firstChild.nodeValue)
+
+</script>
+
+</html>

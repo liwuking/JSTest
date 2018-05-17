@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标测试</title>
+</head>
+<body>
+	<!-- <p onmouseover="mOver(this)" onmouseout="mOut(this)" onmousedown="mDown(this)" onmouseup="mUp(this)" onclick="mClick()" style="background-color: red; width: 200px;padding-top: 25px;text-align: center;">鼠标测试</p> -->
+	<input type="button" name="bb"
+	onclick="mClick()"
+	value="鼠标点击" 
+	>
+	<p>第二个p节点</p>
+	<p>第三个p节点</p>
+</body>
+
+<script type="text/javascript">
+	function mOver(id) {
+		// body...
+		id.innerHTML = "谢谢你"
+	}
+
+	function mOut(id) {
+		// body...
+		id.innerHTML = "鼠标不在范围内"
+	}
+
+	function mDown(id) {
+		// body...
+		id.innerHTML = "按住鼠标"
+	}
+
+	function mUp(id) {
+		// body...
+		id.innerHTML = "松开鼠标"
+	}
+
+	function mClick() {
+		// body...
+		
+		var ps = document.getElementsByTagName('p')
+		console.log("xxxxx: " + ps.length)
+		for (var i = 0; i < ps.length; i++) {
+			document.write(ps[i].innerHTML)
+			//document.write("<br>")
+		}
+	}
+
+</script>
+</html>

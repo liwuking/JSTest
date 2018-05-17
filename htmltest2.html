@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload="checkCookies()">
+	<div id = "main">
+	<p id="intro">Hello World!</p>
+	<p>本例演示 <b>getElementById</b> 方法！</p>
+	<input type="button" name="改变背景颜色"
+	value="改变背景颜色"
+	onclick="changeBackgroundColor()"
+	>
+	<h1 onclick="this.innerHTML = 'Hello!'">点击文本</h1>
+	<h1 onclick="changeText(this)">点击文本2</h1>
+	</div>
+	
+	<p>请输入你的英文名</p>
+	<input type="text" id = "fname" onchange="myFunction()" name="inputTextField">
+	<p>离开输入框时，被触发函数将输入文本转换为大写字母</p>
+
+<script>
+
+function myFunction() {
+	// body...
+	var xx = document.getElementById("fname")
+	xx.value = xx.value.toUpperCase()
+}
+
+function checkCookies() {
+	// body...
+	if (navigator.cookieEnabled==true) {
+		alert("Cookies are enabled")
+	} else {
+		alert("Cookies are not enabled")
+	}
+}
+
+var x=document.getElementById("intro")
+document.write("<p>来自 intro 段落的文本：" + x.innerHTML + "</p>")
+document.write(x.innerHTML)
+console.log(x.firstChild.nodeValue+"xxxx")
+//alert(x.firstChild.nodeValue)
+x.value = "要给#search这个文本框添加的内容"
+document.getElementById("intro").innerHTML = "吧啦吧啦吧啦吧啦"		
+console.log(x.firstChild.nodeValue+"xxxx")
+console.log(x.nodeType)
+
+
+
+//DOM访问
+var tags = document.getElementsByTagName("p")
+document.write("<br>第一段文本: " + tags[1].innerHTML + "<br>")
+var tagsxx = document.getElementById("main").getElementsByTagName("p")
+document.write("<br>div的第一段文本: " + tagsxx[0].innerHTML + "<br>")
+
+//修改元素、属性等
+document.getElementById("intro").style.color = "blue"
+
+var para = document.createElement("p")
+var node = document.createTextNode("this is new")
+para.appendChild(node)
+
+var element = document.getElementById("intro")
+element.appendChild(para)
+
+//JS 函数
+function changeBackgroundColor() {
+	// body...
+	document.body.style.backgroundColor = "red"
+	document.getElementById("intro").innerHTML = "无敌纸杯"
+}
+
+function changeText(id) {
+	// body...
+	id.innerHTML = "changeText"
+}
+
+</script>
+
+</body>
+
+</html>

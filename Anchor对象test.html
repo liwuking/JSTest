@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>更改一个链接的文本、URL以及target</title>
+</head>
+<body>
+	<a href="https://www.baidu.com" target="_blanck" id="myAnchor">百度</a>
+	<input type="button" onclick="changeLink()" name="btn" value="改变超链">
+</body>
+
+<script type="text/javascript">
+	function changeLink() {
+		// body...
+		var anchor = document.getElementById('myAnchor')
+		anchor.innerHTML = "W3CScholl"
+		anchor.href = "http://www.w3school.com.cn/html/html_quiz.asp"
+		anchor.target = "_blanck"
+	}
+</script>
+</html>
